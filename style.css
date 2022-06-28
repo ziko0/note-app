@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* container */
+.container{
+    height: 500px;
+    width: 320px;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* note box */
+.note-box{
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    overflow-y: hidden;
+}
+
+.add-note-btn{
+    all: unset;
+    background-color: orange;
+    border-radius: 100%;
+    position: fixed;
+    top: 85%;
+    right: 25px;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* note */
+.note{
+    height: 110px;
+    width: 90%;
+    position: relative;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: rgba(99, 99, 99, 0,2) 8px 2px 8px 0px;
+}
+
+/* note title and body */
+.note-title,
+.not-body{
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right:  15px;
+    font-size: 17px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.not-body{
+    color: grey;
+    font-size: 15px;
+    top: 10px;
+}
+
+.date,
+.fa-ellipsis{
+    position: absolute;
+    left: 17%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    color: grey;
+    font-size: 11px;
+}
+hr{
+    margin-top: 30px;
+}
+
+.fa-ellipsis{
+    left: 90%;
+    bottom: -3px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* edit note */
+.edit-note{
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition:  all .2s;
+}
+
+.fa-arrow-left{
+    color: #000;
+    font-size: 22px;
+    position: absolute;
+    top: 15px;
+    left: 23px;
+    cursor: pointer;
+}
+
+textarea{
+    all: unset;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    width: 280px;
+    caret-color: orange;
+}
+
+.note-title-input{
+    top: 50px;
+    left: 20px;
+    font-size: 34px;
+    height: 45px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+/* note body */
+
+.note-body-input{
+    top: 55px;
+    margin-bottom: 10px;
+    height: 330px;
+}
+
+::placeholder{
+    color: lightgray;
+}
+
+.menu{
+    height: 46px;
+    width: 86px;
+    border-radius: 3px;
+    box-shadow:  rgba(50, 50, 93, 0.25) 6px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px;
+    
+    background: #fff;
+    position: absolute;
+    margin-top: -23px;
+    right: 0;
+    color: grey;
+    font-size: 12px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: all .2s;
+    border: 1px solid lightgray;
+}
+
+.settings{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 20px
+}
+
+.settings:hover .menu{
+    transform: scale(1);
+}
+
+.menu span:nth-child(2){
+    position: absolute;
+    top: 22px;
+    left: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.no-notes-message,
+.fa-note-sticky{
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    color: gray;
+}
+
+.fa-note-sticky{
+    top: 40%;
+    font-size: 40px;
+}
